@@ -3,6 +3,7 @@ public class Egg {
 
     }
     public int count() {
+		return 0;
 
     }
 }

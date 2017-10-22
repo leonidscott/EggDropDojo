@@ -13,6 +13,7 @@ public class EggDrop {
 
 
     public boolean drop(Egg egg, int floor) throws EmptyNestException {
+		return false;
 
     }
 }
