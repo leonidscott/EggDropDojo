@@ -12,6 +12,7 @@ The todo is as follows:
 - [ ] Make README
 - [ ] Implement workspace.clj
 - [ ] Update documentation  
+- [ ] Add description of Egg, and EggDrop in workspace as a comment  
 
 ### Guidelines
 For each file, there should be:  
