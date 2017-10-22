@@ -1,11 +1,11 @@
 # TODO  
 Here is the structure of egg drop dojo.  
 
-![Plan](pictures/Plan.JPG)  
+![Plan](Plan.JPG)  
 
 ### Todo
 The todo is as follows:  
-- [ ] EmptyNestException.java
+- [x] EmptyNestException.java
 - [ ] Egg.java
 - [ ] EggDrop.java
 - [ ] SampleDesign.java (not to be pushed to github)
