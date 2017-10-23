@@ -14,12 +14,11 @@ public class TestEgg {
 	
 	@Test (expected = EmptyNestException.class)
 	public void testOneEgg() throws EmptyNestException {
-		Egg egg = new Egg();
 		EggDrop eggDrop = new EggDrop(100, 50);
-		eggDrop.drop(egg, 25);
-		assertEquals(1, egg.count());
-		eggDrop.drop(egg, 31);
-		assertEquals(0, egg.count());
+		eggDrop.drop(75);
+		assertEquals(1, eggDrop.eggCount());
+		eggDrop.drop(80);
+		assertEquals(0, eggDrop.eggCount());
 	}
 	
 	@Test
