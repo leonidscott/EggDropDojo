@@ -6,7 +6,7 @@ Here is the structure of egg drop dojo.
 ### Todo
 The todo is as follows:  
 - [x] EmptyNestException.java
-- [ ] Egg.java
+- [x] Egg.java
 - [ ] EggDrop.java
 - [ ] SampleDesign.java (not to be pushed to github)
 - [ ] Make README
