@@ -8,7 +8,10 @@ The todo is as follows:
 - [x] EmptyNestException.java
 - [x] Egg.java
 - [x] EggDrop.java
-- [ ] Get rid of Egg.java
+- [x] Get rid of Egg.java
+- [ ] Add feedback about loosing egg (another error?)
+- [ ] Add feedback about being outside of the building
+- [ ] Create array that shows where people have selected and make a method to send. 
 - [ ] SampleDesign.java (not to be pushed to github)
 - [ ] Make README
 - [ ] Implement workspace.clj
