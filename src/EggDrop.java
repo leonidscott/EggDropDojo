@@ -1,30 +1,44 @@
 import java.util.Random;
 
 public class EggDrop {
+	
+	private Egg egg;
     private int[] building;
     private int breakFloor;
 
     //Main Constructor
     public EggDrop(int n) {
+    	
         building = new int[n];
         Random random = new Random();
-        random.nextInt(n);
+        breakFloor = random.nextInt(n);
+        
+        egg = new Egg();
     }
     //Constructor for tests cases
     public EggDrop(int n, int breakFloor) {
         building = new int[n];
         this.breakFloor = breakFloor;
+        
+        egg = new Egg();
     }
 
 
-    public boolean drop(Egg egg, int floor) throws EmptyNestException {
+    public boolean drop(int floor) throws EmptyNestException {
 		checkEmpty(egg);
-		if(floor != breakFloor) {
+		if(floor > breakFloor) {
 			egg.decriment();
 			checkEmpty(egg);
 			return false;
 		}
+		else if (floor < breakFloor) {
+			return false;
+		}
 		return true;
+    }
+    
+    public int eggCount () {
+    	return egg.count();
     }
     
     private void checkEmpty(Egg egg) throws EmptyNestException {
