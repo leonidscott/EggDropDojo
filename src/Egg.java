@@ -1,9 +1,16 @@
 public class Egg {
+	private int eggCount = 0;
+	
     public Egg() {
+    	eggCount = 2;
+    }
+    
+    public int count() {
+		return eggCount;
 
     }
-    public int count() {
-		return 0;
-
+    
+    public void decriment(){
+    	eggCount--;
     }
 }
