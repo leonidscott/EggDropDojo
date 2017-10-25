@@ -27,8 +27,8 @@ public class TestEggDrop {
 		assertTrue(eggDrop.drop(75));
 		assertEquals(2, eggDrop.eggCount());
 		
-		int[] testAgainst = new int[100];
-		testAgainst[75] = 1;
+		boolean[] testAgainst = new boolean[100];
+		testAgainst[75] = true;
 		assertArrayEquals(testAgainst, eggDrop.building);
 	}
 	

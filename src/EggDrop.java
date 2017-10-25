@@ -3,13 +3,13 @@ import java.util.Random;
 public class EggDrop {
 	
 	private Egg egg;
-    public int[] building;
+    public boolean[] building;
     private int breakFloor;
 
     //Main Constructor
     public EggDrop(int n) {
     	
-        building = new int[n];
+        building = new boolean[n];
         Random random = new Random();
         breakFloor = random.nextInt(n);
         
@@ -17,7 +17,7 @@ public class EggDrop {
     }
     //Constructor for tests cases
     public EggDrop(int n, int breakFloor) {
-        building = new int[n];
+        building = new boolean[n];
         this.breakFloor = breakFloor;
         
         egg = new Egg();
@@ -26,7 +26,7 @@ public class EggDrop {
 
     public boolean drop(int floor) throws EmptyNestException {
 		checkEmpty(egg);
-		building[floor] = 1;
+		building[floor] = true;
 		if(floor > breakFloor) {
 			egg.decriment();
 			checkEmpty(egg);
