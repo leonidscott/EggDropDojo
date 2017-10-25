@@ -10,9 +10,9 @@ The todo is as follows:
 - [x] EggDrop.java
 - [x] Get rid of Egg.java
 - [ ] Add feedback about loosing egg (another error?)
-- [ ] Add feedback about being outside of the building
-- [ ] Create array that shows where people have selected and make a method to send. 
-- [ ] SampleDesign.java (not to be pushed to github)
+- [x] Add feedback about being outside of the building. It will throw an index out of bounds exception. This will need to be documented.
+- [x] Create array that shows where people have selected and make a method to send.
+- [x] SampleDesign.java (not to be pushed to github)
 - [ ] Make README
 - [ ] Implement workspace.clj
 - [ ] Update documentation  
