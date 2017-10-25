@@ -9,9 +9,10 @@ The todo is as follows:
 - [x] Egg.java
 - [x] EggDrop.java
 - [x] Get rid of Egg.java
-- [ ] Add feedback about loosing egg (another error?)
+- [x] Add feedback about loosing egg (another error?)
+- [ ] Need to decide on using HumptyDumpty Error
 - [ ] Add feedback about being outside of the building
-- [ ] Create array that shows where people have selected and make a method to send. 
+- [ ] Create array that shows where people have selected and make a method to send.
 - [ ] SampleDesign.java (not to be pushed to github)
 - [ ] Make README
 - [ ] Implement workspace.clj
