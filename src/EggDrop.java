@@ -24,12 +24,12 @@ public class EggDrop {
     }
 
 
-    public boolean drop(int floor) throws EmptyNestException {
+    public boolean drop(int floor) throws EmptyNestException, HumptyDumptyException {
 		checkEmpty(egg);
 		if(floor > breakFloor) {
 			egg.decriment();
 			checkEmpty(egg);
-			return false;
+			throw new HumptyDumptyException();
 		}
 		else if (floor < breakFloor) {
 			return false;

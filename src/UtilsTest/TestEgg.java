@@ -13,7 +13,7 @@ public class TestEgg {
 	}
 	
 	@Test (expected = EmptyNestException.class)
-	public void testOneEgg() throws EmptyNestException {
+	public void testOneEgg() throws EmptyNestException, HumptyDumptyException {
 		EggDrop eggDrop = new EggDrop(100, 50);
 		eggDrop.drop(75);
 		assertEquals(1, eggDrop.eggCount());

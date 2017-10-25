@@ -6,7 +6,7 @@ public class TestEggDrop {
 
 	//Case: Test that random floor is between 0 and n
 	@Test
-	public void testRandConstructor() throws EmptyNestException {
+	public void testRandConstructor() throws EmptyNestException, HumptyDumptyException {
 		EggDrop eggDrop = new EggDrop(100);
 		
 		boolean foundFloor = false;
@@ -22,7 +22,7 @@ public class TestEggDrop {
 	
 	//Case: Egg is dropped on the correct floor
 	@Test
-	public void testSuccesfulDrop() throws EmptyNestException {
+	public void testSuccesfulDrop() throws EmptyNestException, HumptyDumptyException {
 		EggDrop eggDrop = new EggDrop(100, 75);
 		assertTrue(eggDrop.drop(75));
 		assertEquals(2, eggDrop.eggCount());
@@ -58,29 +58,29 @@ public class TestEggDrop {
 	*/
 	
 	//Case1: Starting With Two Eggs - Under the break floor
-	@Test
-	public void egg2Under() throws EmptyNestException {
+	@Test 
+	public void egg2Under() throws EmptyNestException, HumptyDumptyException {
 		EggDrop eggDrop = new EggDrop(100, 64);
 		assertFalse(eggDrop.drop(50));
 		assertEquals(2, eggDrop.eggCount());
 	}
 	//Case2: Starting with two eggs - On the break floor
 	@Test
-	public void egg2On() throws EmptyNestException {
+	public void egg2On() throws EmptyNestException, HumptyDumptyException {
 		EggDrop eggDrop = new EggDrop(200, 190);
 		assertTrue(eggDrop.drop(190));
 		assertEquals(2, eggDrop.eggCount());
 	}
 	//Case3: Starting with two eggs - Over the break floor
-	@Test
-	public void egg2Over() throws EmptyNestException {
+	@Test (expected = HumptyDumptyException.class)
+	public void egg2Over() throws EmptyNestException, HumptyDumptyException {
 		EggDrop eggDrop = new EggDrop(250, 199);
 		assertFalse(eggDrop.drop(240));
 		assertEquals(1, eggDrop.eggCount());
 	}
-	//Case4: Start with one eggs - Under the break floor
-	@Test
-	public void egg1Under() throws EmptyNestException {
+	//Case4: Start with one egg - Under the break floor
+	@Test (expected = HumptyDumptyException.class)
+	public void egg1Under() throws EmptyNestException, HumptyDumptyException {
 		EggDrop eggDrop = new EggDrop(500, 417);
 		assertFalse(eggDrop.drop(450));
 		assertEquals(1, eggDrop.eggCount());
@@ -88,8 +88,8 @@ public class TestEggDrop {
 		assertEquals(1, eggDrop.eggCount());
 	}
 	//Case5: Start with one egg - On the break floor
-	@Test
-	public void egg1On() throws EmptyNestException {
+	@Test (expected = HumptyDumptyException.class)
+	public void egg1On() throws EmptyNestException, HumptyDumptyException {
 		EggDrop eggDrop = new EggDrop(1000, 10);
 		assertFalse(eggDrop.drop(450));
 		assertEquals(1, eggDrop.eggCount());
@@ -98,7 +98,7 @@ public class TestEggDrop {
 	}
 	//Case6: Start with one egg - Over the break floor
 	@Test (expected = EmptyNestException.class)
-	public void egg1Over() throws EmptyNestException {
+	public void egg1Over() throws EmptyNestException, HumptyDumptyException {
 		EggDrop eggDrop = new EggDrop(100000, 400);
 		assertFalse(eggDrop.drop(450));
 		assertEquals(1, eggDrop.eggCount());
