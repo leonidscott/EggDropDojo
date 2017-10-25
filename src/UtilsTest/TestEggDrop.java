@@ -26,36 +26,11 @@ public class TestEggDrop {
 		EggDrop eggDrop = new EggDrop(100, 75);
 		assertTrue(eggDrop.drop(75));
 		assertEquals(2, eggDrop.eggCount());
-	}
-	
-	/*
-	//Case: Egg is dropped on the wrong floor, one egg should be left
-	@Test
-	public void testFirstUnsuccesfullDrop() throws EmptyNestException {
-		EggDrop eggDrop = new EggDrop(100, 63);
-		assertFalse(eggDrop.drop(24));
-		assertEquals(1, eggDrop.eggCount());
-	}
-	
-	//Case: Egg is dropped on the wrong floor, no eggs remaining.
-	@Test (expected = EmptyNestException.class)
-	public void testLastUnsuccesfullDrop() throws EmptyNestException {
-		EggDrop eggDrop = new EggDrop(100, 11);
 		
-		//First egg
-		assertFalse(eggDrop.drop(24));
-		assertEquals(1, eggDrop.eggCount());
-		
-		//Second egg
-		try {
-			assertFalse(eggDrop.drop(23));
-		} catch (EmptyNestException exp) {
-			assertEquals(0, eggDrop.eggCount());
-			throw exp;
-		}
-		
+		int[] testAgainst = new int[100];
+		testAgainst[75] = 1;
+		assertArrayEquals(testAgainst, eggDrop.building);
 	}
-	*/
 	
 	//Case1: Starting With Two Eggs - Under the break floor
 	@Test

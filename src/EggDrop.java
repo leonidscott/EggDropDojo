@@ -3,7 +3,7 @@ import java.util.Random;
 public class EggDrop {
 	
 	private Egg egg;
-    private int[] building;
+    public int[] building;
     private int breakFloor;
 
     //Main Constructor
@@ -26,6 +26,7 @@ public class EggDrop {
 
     public boolean drop(int floor) throws EmptyNestException {
 		checkEmpty(egg);
+		building[floor] = 1;
 		if(floor > breakFloor) {
 			egg.decriment();
 			checkEmpty(egg);
