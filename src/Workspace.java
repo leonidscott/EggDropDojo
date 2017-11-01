@@ -16,7 +16,7 @@ public class Workspace {
     and will return an integer representing the breaking floor.
     Inside findBreakingFloor or any function called by findBreakingFloor, you may not create a new Egg Drop Object.
 
-    The main function can be used to test findBreakingFloor.
+    The main function can be used to test findBreakingFloor. It will not be called by tests. 
     --------------------------------------------------------------------------------------
     Egg Drop:
     Constuctor. There are two construtors. The first is for production, and the second is for testing.
@@ -36,5 +36,7 @@ public class Workspace {
             3) The floor will be above the breakFloor; The egg will break. The function will return false, and the egg count will be decrimented.
                 If you loose your last egg, and your eggCount decriments to zero, drop will return a EmptyNestException.
                 If you call drop with zero eggs, you will recieve another EmptyNestException. 
+    
+    If you loose all eggs, it is recomended that you throw the EmptyNestException rather than trying in an infinite loop of dropping egs you don't have. 
     */
 }
